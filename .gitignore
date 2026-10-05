@@ -1,0 +1,4 @@
+node_modules/
+data/
+demo-workspace/
+crew.config.local.json

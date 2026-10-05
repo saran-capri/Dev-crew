@@ -1,0 +1,307 @@
+{
+  "settings": {
+    "port": 4610,
+    "workspace": "./demo-workspace",
+    "model": "sonnet",
+    "reportModel": "sonnet",
+    "maxConcurrent": 2,
+    "dailyReport": {
+      "enabled": true,
+      "at": "09:00",
+      "weekdaysOnly": true
+    },
+    "claudeCommand": "claude",
+    "monday": {
+      "token": "",
+      "apiVersion": ""
+    }
+  },
+  "projects": [
+    {
+      "id": "payments",
+      "name": "Payments Portal",
+      "folder": "payments-portal",
+      "stack": "React + TypeScript web, Node/Express API",
+      "context": "Customer-facing portal for invoices and card payments.",
+      "roles": {
+        "frontend": {
+          "repo": "web"
+        },
+        "backend": {
+          "repo": "api"
+        }
+      },
+      "monday": {
+        "boardId": "",
+        "roleColumn": "Agent",
+        "peopleColumn": "Owner",
+        "statusColumn": "Status"
+      }
+    },
+    {
+      "id": "inventory",
+      "name": "Inventory Service",
+      "folder": "inventory-service",
+      "stack": ".NET 8 minimal API, Terraform on Azure",
+      "context": "Stock levels and reservations for the warehouses.",
+      "roles": {
+        "backend": {
+          "repo": "api"
+        },
+        "devops": {
+          "repo": "infra"
+        }
+      },
+      "monday": {
+        "boardId": "",
+        "roleColumn": "Agent",
+        "peopleColumn": "Owner",
+        "statusColumn": "Status"
+      }
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics Platform",
+      "folder": "analytics-platform",
+      "stack": "Python ETL pipeline, PostgreSQL",
+      "context": "Nightly ETL from the operational databases into the reporting warehouse.",
+      "roles": {
+        "backend": {
+          "repo": "pipeline"
+        },
+        "database": {
+          "repo": "db"
+        }
+      },
+      "monday": {
+        "boardId": "",
+        "roleColumn": "Agent",
+        "peopleColumn": "Owner",
+        "statusColumn": "Status"
+      }
+    },
+    {
+      "id": "customer",
+      "name": "Customer App",
+      "folder": "customer-app",
+      "stack": "Angular web, Java Spring Boot API",
+      "context": "Account self-service for customers.",
+      "roles": {
+        "frontend": {
+          "repo": "web"
+        },
+        "backend": {
+          "repo": "api"
+        }
+      },
+      "monday": {
+        "boardId": "",
+        "roleColumn": "Agent",
+        "peopleColumn": "Owner",
+        "statusColumn": "Status"
+      }
+    },
+    {
+      "id": "tools",
+      "name": "Internal Tools",
+      "folder": "internal-tools",
+      "stack": "Node monorepo, Docker",
+      "context": "Admin scripts and back-office dashboards used by support staff.",
+      "monday": {
+        "boardId": "",
+        "roleColumn": "Agent",
+        "peopleColumn": "Owner",
+        "statusColumn": "Status"
+      }
+    }
+  ],
+  "people": [
+    {
+      "name": "Ravi Menon",
+      "company": "Bluepeak Consulting",
+      "contractor": true,
+      "title": "Senior .NET developer",
+      "email": "ravi.menon@example.com",
+      "teams": "ravi.menon@example.com",
+      "hours": "Mon–Fri, 9:00–17:30 IST",
+      "projects": [
+        "inventory"
+      ],
+      "roles": [
+        "backend"
+      ],
+      "skills": [
+        ".NET 8",
+        "minimal APIs",
+        "EF Core"
+      ]
+    },
+    {
+      "name": "Hannah Cole",
+      "company": "Bluepeak Consulting",
+      "contractor": true,
+      "title": "Cloud engineer",
+      "email": "hannah.cole@example.com",
+      "projects": [
+        "inventory",
+        "tools"
+      ],
+      "roles": [
+        "devops"
+      ],
+      "skills": [
+        "Terraform",
+        "Azure",
+        "Docker"
+      ]
+    },
+    {
+      "name": "Marco Silva",
+      "company": "In-house",
+      "title": "Lead developer",
+      "email": "marco.silva@example.com",
+      "teams": "marco.silva@example.com",
+      "projects": [
+        "payments"
+      ],
+      "roles": [
+        "backend",
+        "architect"
+      ],
+      "skills": [
+        "Node",
+        "Express",
+        "payments"
+      ]
+    },
+    {
+      "name": "Aiko Tanaka",
+      "company": "Northwind Contractors",
+      "contractor": true,
+      "title": "Frontend developer",
+      "email": "aiko.tanaka@example.com",
+      "projects": [
+        "payments",
+        "customer"
+      ],
+      "roles": [
+        "frontend"
+      ],
+      "skills": [
+        "React",
+        "Angular",
+        "accessibility"
+      ]
+    },
+    {
+      "name": "Daniel Okafor",
+      "company": "In-house",
+      "title": "Data engineer",
+      "email": "daniel.okafor@example.com",
+      "projects": [
+        "analytics"
+      ],
+      "roles": [
+        "database",
+        "backend"
+      ],
+      "skills": [
+        "Python",
+        "PostgreSQL",
+        "ETL"
+      ]
+    },
+    {
+      "name": "Sofia Rossi",
+      "company": "Northwind Contractors",
+      "contractor": true,
+      "title": "QA engineer",
+      "email": "sofia.rossi@example.com",
+      "hours": "Tue–Sat",
+      "projects": [
+        "*"
+      ],
+      "roles": [
+        "qa"
+      ],
+      "skills": [
+        "Playwright",
+        "Jest",
+        "test plans"
+      ]
+    },
+    {
+      "name": "Liam Walsh",
+      "company": "In-house",
+      "title": "Solutions architect",
+      "email": "liam.walsh@example.com",
+      "teams": "liam.walsh@example.com",
+      "projects": [
+        "*"
+      ],
+      "roles": [
+        "architect"
+      ],
+      "skills": [
+        "Azure",
+        "integration",
+        "security"
+      ]
+    },
+    {
+      "name": "Priya Nair",
+      "company": "Bluepeak Consulting",
+      "contractor": true,
+      "title": "Java developer",
+      "email": "priya.nair@example.com",
+      "projects": [
+        "customer"
+      ],
+      "roles": [
+        "backend"
+      ],
+      "skills": [
+        "Java",
+        "Spring Boot"
+      ]
+    },
+    {
+      "name": "Tom Becker",
+      "company": "In-house",
+      "title": "DBA",
+      "email": "tom.becker@example.com",
+      "projects": [
+        "inventory",
+        "payments",
+        "customer"
+      ],
+      "roles": [
+        "database"
+      ],
+      "skills": [
+        "SQL Server",
+        "Azure SQL",
+        "indexing"
+      ]
+    },
+    {
+      "name": "Grace Liu",
+      "company": "Northwind Contractors",
+      "contractor": true,
+      "title": "Full-stack developer",
+      "email": "grace.liu@example.com",
+      "projects": [
+        "tools"
+      ],
+      "roles": [
+        "frontend",
+        "backend"
+      ],
+      "skills": [
+        "Node",
+        "Docker",
+        "internal tools"
+      ]
+    }
+  ]
+}

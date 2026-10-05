@@ -1,0 +1,15 @@
+{
+  "name": "dev-crew",
+  "version": "0.1.0",
+  "description": "A developer crew per project: architect, frontend, backend, database, QA and DevOps agents that take daily tasks and report back.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server.mjs",
+    "demo": "node scripts/make-demo.mjs",
+    "doctor": "node scripts/doctor.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
